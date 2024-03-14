@@ -343,8 +343,10 @@ class SpecialSourceProvider:
                 url_tp = 'https://playwright.azureedge.net/builds/firefox/%d/%s'
                 if revision < 1140:
                     dl_file = 'firefox-linux.zip'
+                elif revision < 1440:
+                    dl_file = 'firefox-linux-18.04.zip'
                 else:
-                    dl_file = 'firefox-ubuntu-18.04.zip'
+                    dl_file = 'firefox-ubuntu-22.04.zip'
             elif name == 'webkit':
                 url_tp = 'https://playwright.azureedge.net/builds/webkit/%d/%s'
                 if revision < 1317:
